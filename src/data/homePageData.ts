@@ -9,6 +9,7 @@ import { fibonacci, fibonacciTask } from "../tasks/arrays/fibonacci"
 import { fibonacciRecursive, fibonacciRecursiveTask } from "../tasks/recursion/fibonacciRecursive"
 import { tripleStep, tripleStepTask } from "../tasks/recursion/tripleStep"
 import { simpleSort, simpleSortTask } from "../tasks/sort/simpleSort"
+import { mergeSort, mergeSortTask } from "../tasks/sort/mergeSort"
 
 const tasks: ITask[] = [
   hourglassSumTask,
@@ -21,6 +22,7 @@ const tasks: ITask[] = [
   fibonacciRecursiveTask,
   tripleStepTask,
   simpleSortTask,
+  mergeSortTask,
 ]
 
 export const methods: Record<string, (params?: any) => any> = {
@@ -34,6 +36,7 @@ export const methods: Record<string, (params?: any) => any> = {
   fibonacciRecursive,
   tripleStep,
   simpleSort,
+  mergeSort,
 }
 
 const getTaskById = (id: number): ITask => {

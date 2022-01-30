@@ -36,7 +36,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (!isEmpty(homePageTasks)) {
-      const task = homePageTasks["simpleSort"]
+      const task = homePageTasks["mergeSort"]
       setSelectedTask(task)
       setInputValue(task.defaultInput)
     }
@@ -52,7 +52,7 @@ const HomePage = () => {
         let input = inputValue ?? selectedTask.defaultInput
 
         if (!inputValue) {
-          setInputValue(toString(input))
+          setInputValue(input)
         }
 
         console.clear()
@@ -60,8 +60,8 @@ const HomePage = () => {
         setResultsText(toString(result))
       }
     } catch (e) {
-      setErrorMessage(e.stack)
-      setOpenErrorMessage(true)
+      // setErrorMessage(e.stack)
+      // setOpenErrorMessage(true)
     }
   }, [inputValue, selectedTask])
 

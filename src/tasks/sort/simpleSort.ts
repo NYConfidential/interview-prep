@@ -1,7 +1,8 @@
 import { ITask } from "../../pages/homePage/state/homePageSlice"
+import { convertToNumbersArray } from "../../common/dataHelpers"
 
 export const simpleSort = (input: number[]) => {
-  let sortedArray = [...input]
+  let sortedArray = [...convertToNumbersArray(input)]
 
   for (let i = 0; i < sortedArray.length; i++) {
     for (let j = i + 1; j < sortedArray.length; j++) {
